@@ -3,15 +3,20 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     float MoveSpeed = 5f;
-    void Start()
+    private float Horizontal;
+    private Rigidbody2D rb;
+    void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
-    void Update()
+    public void SetHorizontal(float value)
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        Vector3 dir = new Vector3(horizontal, 0, 0).normalized;
-        transform.position += dir * MoveSpeed * Time.deltaTime;
-        Debug.Log(horizontal);
+        Horizontal = value;
     }
+    void FixedUpdate()
+    {
+        float VelocityY = rb.linearVelocity.y;
+        rb.linearVelocity = new Vector2(Horizontal * MoveSpeed, VelocityY);
+    }
+
 }
