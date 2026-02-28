@@ -11,9 +11,9 @@ public class PlayerFacing : MonoBehaviour
     }
     void Update()
     {
-        if (playercontroller.Horizontal > 0)
+        if (playercontroller.Horizontal < 0)
             Img.flipX = true;
-        else if (playercontroller.Horizontal < 0)
+        else if (playercontroller.Horizontal > 0)
             Img.flipX = false;
     }
 }
