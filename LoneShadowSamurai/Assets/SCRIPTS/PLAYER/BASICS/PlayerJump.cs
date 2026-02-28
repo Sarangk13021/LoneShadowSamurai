@@ -7,8 +7,8 @@ public class PlayerJump : MonoBehaviour
     public LayerMask GroundLayer;
 
     private Rigidbody2D rb;
-    private bool isGrounded;
-    private bool jumprequest;
+    public bool isGrounded;
+    public bool jumprequest;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

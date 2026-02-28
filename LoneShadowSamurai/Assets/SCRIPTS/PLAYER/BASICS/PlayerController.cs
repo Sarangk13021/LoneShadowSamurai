@@ -2,14 +2,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //============ Giving Values ============//
     public float Horizontal;
     private const string HORIZONTAL = "Horizontal";
+    //========== Reference Scripts ==========//
     private PlayerMovement playermovement;
     private PlayerAnimation playeranimation;
+    private PlayerJump playerjump;
     void Awake()
     {
         playermovement = GetComponent<PlayerMovement>();
         playeranimation = GetComponentInChildren<PlayerAnimation>();
+        playerjump = GetComponent<PlayerJump>();
     }
     void Update()
     {
