@@ -1212,7 +1212,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 1863874732}
-  attackDmg: 2
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1675,7 +1674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9004148123999124005}
   - component: {fileID: 9004148123999124004}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1692,7 +1691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9004148124213327054}
   - component: {fileID: 9004148124213327041}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Wing Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1794,7 +1793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9004148124486053606}
   - component: {fileID: 9004148124486053625}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Wing Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1881,7 +1880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9004148125001750242}
   - component: {fileID: 9004148125001750245}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

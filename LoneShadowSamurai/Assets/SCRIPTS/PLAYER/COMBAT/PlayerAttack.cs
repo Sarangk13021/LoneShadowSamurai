@@ -5,7 +5,7 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private Transform attackPoint;
     private float attackRange = 0.17f;
-    [SerializeField] private int attackDmg = 2;
+    private int attackDmg = 1;
     [SerializeField] private LayerMask enemyLayer;
     private PlayerAnimation playerAnimation;
     void Awake()
