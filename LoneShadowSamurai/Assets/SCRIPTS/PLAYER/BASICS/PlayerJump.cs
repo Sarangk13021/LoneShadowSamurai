@@ -22,7 +22,7 @@ public class PlayerJump : MonoBehaviour
     }
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(GroundCheck.position, 0.2f, GroundLayer);
+        isGrounded = Physics2D.OverlapCircle(GroundCheck.position, 0.3f, GroundLayer);
         
             if (jumprequest && isGrounded)
             {

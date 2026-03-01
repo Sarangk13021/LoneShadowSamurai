@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
@@ -6,12 +7,14 @@ public class PlayerAnimation : MonoBehaviour
     private Rigidbody2D rb;
     private CapsuleCollider2D CapsuleCollider;
     private CircleCollider2D CircleCollider;
+    private PlayerAttack playerattack;
     void Awake()
     {
         anim = GetComponent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
         CapsuleCollider = GetComponentInParent<CapsuleCollider2D>();
         CircleCollider = GetComponentInParent<CircleCollider2D>();
+        playerattack = GetComponentInParent<PlayerAttack>();
     }
 
     // -------- MOVE ----------
@@ -33,6 +36,10 @@ public class PlayerAnimation : MonoBehaviour
     public void PlayAttack()
     {
         anim.SetTrigger("Attack");
+    }
+    public void AttackImpact()
+    {
+        playerattack.PerformAttackHit();
     }
     // -------- DEATH ----------
     public void PlayDeath()
@@ -57,4 +64,5 @@ public class PlayerAnimation : MonoBehaviour
         CircleCollider.enabled = false;
         CapsuleCollider.enabled = false;
     }
+    
 }

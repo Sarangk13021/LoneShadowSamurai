@@ -9,11 +9,13 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement playermovement;
     private PlayerAnimation playeranimation;
     private PlayerJump playerjump;
+    private PlayerAttack playerattack;
     void Awake()
     {
         playermovement = GetComponent<PlayerMovement>();
         playeranimation = GetComponentInChildren<PlayerAnimation>();
         playerjump = GetComponent<PlayerJump>();
+        playerattack = GetComponent<PlayerAttack>();
     }
     void Update()
     {
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
         playermovement.SetHorizontal(Horizontal);
         if (Input.GetMouseButtonDown(0))
         {
-            playeranimation.PlayAttack();
+            playerattack.Attack();
         }
         if (Input.GetKey(KeyCode.P))
         {
@@ -43,7 +45,7 @@ public class PlayerController : MonoBehaviour
     }
     public void AttackButton()
     {
-        playeranimation.PlayAttack();
+        playerattack.Attack();
     }
     public void DodgeButton()
     {
